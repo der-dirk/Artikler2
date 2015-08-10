@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="artikler">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/js/bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body class="container" ng-controller="ExpressionController">
+    <div class="product row" ng-repeat="expressionset in expressions">
+      <h3>
+        {{expressionset.expression}}
+        <em class="pull-right">${{product.price}}</em>
+      </h3>
+    </div>
+  </body>
+</html>
