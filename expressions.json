@@ -7,6 +7,6 @@
  {
   "expression": "das tut ___ gut",
   "matches": ["mir"],
-  "candidates": ["mich", "fŸr mich"]
+  "candidates": ["mich", "für mich"]
  }
 ]

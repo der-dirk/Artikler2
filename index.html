@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="artikler">
   <head>
-    <link rel="stylesheet" type="text/css" href="bootstrap/js/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
@@ -9,8 +9,16 @@
     <div class="product row" ng-repeat="expressionset in expressions">
       <h3>
         {{expressionset.expression}}
-        <em class="pull-right">${{product.price}}</em>
       </h3>
+      <table>
+        <tr>
+          <td ng-repeat="candidate in expressionset.candidates">
+            <button ng-click="clickMe([expressionset.matches, candidate])">{{candidate}}</button>
+          </td>
+        </tr>
+      </table>
     </div>
+    <h2 ng-show="ok">Richtig</h2>
+    <h2 ng-hide="ok">Falsch</h2>
   </body>
 </html>
